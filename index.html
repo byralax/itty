@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Loan Services</title>
+    <!-- Link to Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 font-sans">
+    <!-- Header section -->
+    <header class="bg-blue-600 dark:bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Website title -->
+            <h1 class="text-2xl font-bold">Bank Loan Services</h1>
+            <!-- Navigation menu -->
+            <nav>
+                <a href="index.html" class="text-white px-3 hover:text-gray-300">Home</a>
+                <a href="services.html" class="text-white px-3 hover:text-gray-300">Services</a>
+                <a href="apply.html" class="text-white px-3 hover:text-gray-300">Apply</a>
+                <a href="status.html" class="text-white px-3 hover:text-gray-300">Loan Status</a>
+                <a href="contact.html" class="text-white px-3 hover:text-gray-300">Contact</a>
+            </nav>
+            <!-- Dark mode toggle button -->
+            <button id="themeToggle" class="ml-4 px-4 py-2 bg-gray-700 dark:bg-gray-600 text-white rounded">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-200 dark:bg-gray-800 py-10 text-center">
+        <h2 class="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-100">Your Trusted Partner for All Loan Needs</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">Streamlined services from application to repayment.</p>
+        <a href="apply.html" class="bg-blue-600 text-white px-6 py-2 rounded shadow-lg hover:bg-blue-700">Apply Now</a>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-blue-600 dark:bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 Bank Loan Services. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Toggle dark mode when the button is clicked
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>

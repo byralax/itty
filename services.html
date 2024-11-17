@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Bank Loan</title>
+    <!-- Link to Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 font-sans">
+    <!-- Header section -->
+    <header class="bg-blue-600 dark:bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Website title -->
+            <h1 class="text-2xl font-bold">Bank Loan Services</h1>
+            <!-- Navigation menu -->
+            <nav>
+                <a href="index.html" class="text-white px-3 hover:text-gray-300">Home</a>
+                <a href="services.html" class="text-white px-3 hover:text-gray-300">Services</a>
+                <a href="apply.html" class="text-white px-3 hover:text-gray-300">Apply</a>
+                <a href="status.html" class="text-white px-3 hover:text-gray-300">Loan Status</a>
+                <a href="contact.html" class="text-white px-3 hover:text-gray-300">Contact</a>
+            </nav>
+            <!-- Dark mode toggle button -->
+            <button id="themeToggle" class="ml-4 px-4 py-2 bg-gray-700 dark:bg-gray-600 text-white rounded">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Loan Origination service -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100">Loan Origination</h3>
+                    <p class="text-gray-700 dark:text-gray-300">End-to-end management from application to approval.</p>
+                </div>
+                <!-- Credit Analysis service -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100">Credit Analysis</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Detailed assessment of creditworthiness.</p>
+                </div>
+                <!-- Loan Disbursement service -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100">Loan Disbursement</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Efficient and secure fund disbursement.</p>
+                </div>
+                <!-- Loan Servicing service -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100">Loan Servicing</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Manage payments and schedules seamlessly.</p>
+                </div>
+                <!-- Collections service -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100">Collections</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Proactive tracking and overdue management.</p>
+                </div>
+                <!-- Reporting & Analytics service -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded shadow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-gray-100">Reporting & Analytics</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Comprehensive insights on loan performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-blue-600 dark:bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 Bank Loan Services. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Toggle dark mode when the button is clicked
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>

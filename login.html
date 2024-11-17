@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Log In - Bank Loan Services</title>
+    <!-- Link to Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 font-sans">
+    <!-- Header section -->
+    <header class="bg-blue-600 dark:bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Website title -->
+            <h1 class="text-2xl font-bold">Bank Loan Services</h1>
+            <!-- Dark mode toggle button -->
+            <button id="themeToggle" class="ml-4 px-4 py-2 bg-gray-700 dark:bg-gray-600 text-white rounded">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- Sign Up / Log In Section -->
+    <section class="py-10 flex justify-center items-center h-screen">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded shadow-lg max-w-sm w-full">
+            <!-- Tabs for switching between sign up and log in -->
+            <div class="flex justify-around mb-6">
+                <button id="signupTab" class="bg-blue-600 text-white px-4 py-2 rounded">Sign Up</button>
+                <button id="loginTab" class="bg-gray-300 text-gray-700 dark:bg-gray-600 dark:text-gray-100 px-4 py-2 rounded">Log In</button>
+            </div>
+            <!-- Sign Up Form -->
+            <form id="signupForm">
+                <div class="mb-4">
+                    <label for="signupName" class="block text-gray-700 dark:text-gray-300">Full Name</label>
+                    <input type="text" id="signupName" class="w-full border-gray-300 rounded p-2 dark:bg-gray-700 dark:text-gray-100">
+                </div>
+                <div class="mb-4">
+                    <label for="signupEmail" class="block text-gray-700 dark:text-gray-300">Email Address</label>
+                    <input type="email" id="signupEmail" class="w-full border-gray-300 rounded p-2 dark:bg-gray-700 dark:text-gray-100">
+                </div>
+                <div class="mb-4">
+                    <label for="signupPassword" class="block text-gray-700 dark:text-gray-300">Password</label>
+                    <input type="password" id="signupPassword" class="w-full border-gray-300 rounded p-2 dark:bg-gray-700 dark:text-gray-100">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Sign Up</button>
+                </div>
+            </form>
+            <!-- Log In Form -->
+            <form id="loginForm" class="hidden">
+                <div class="mb-4">
+                    <label for="loginEmail" class="block text-gray-700 dark:text-gray-300">Email Address</label>
+                    <input type="email" id="loginEmail" class="w-full border-gray-300 rounded p-2 dark:bg-gray-700 dark:text-gray-100">
+                </div>
+                <div class="mb-4">
+                    <label for="loginPassword" class="block text-gray-700 dark:text-gray-300">Password</label>
+                    <input type="password" id="loginPassword" class="w-full border-gray-300 rounded p-2 dark:bg-gray-700 dark:text-gray-100">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Log In</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-blue-600 dark:bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 Bank Loan Services. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const signupTab = document.getElementById('signupTab');
+        const loginTab = document.getElementById('loginTab');
+        const signupForm = document.getElementById('signupForm');
+        const loginForm = document.getElementById('loginForm');
+
+        // Toggle dark mode when the button is clicked
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+        });
+
+        // Switch between sign up and log in forms
+        signupTab.addEventListener('click', () => {
+            signupTab.classList.add('bg-blue-600', 'text-white');
+            loginTab.classList.remove('bg-blue-600', 'text-white');
+            loginTab.classList.add('bg-gray-300', 'text-gray-700');
+            signupForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('bg-blue-600', 'text-white');
+            signupTab.classList.remove('bg-blue-600', 'text-white');
+            signupTab.classList.add('bg-gray-300', 'text-gray-700');
+            loginForm.classList.remove('hidden');
+            signupForm.classList.add('hidden');
+        });
+
+        // Handle form submissions
+        signupForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Sign Up Successful! Redirecting to Home Page...');
+            window.location.href = 'index.html';
+        });
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Log In Successful! Redirecting to Home Page...');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

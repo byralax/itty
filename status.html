@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Status - Bank Loan Services</title>
+    <!-- Link to Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 font-sans">
+    <!-- Header section -->
+    <header class="bg-blue-600 dark:bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Website title -->
+            <h1 class="text-2xl font-bold">Bank Loan Services</h1>
+            <!-- Navigation menu -->
+            <nav>
+                <a href="index.html" class="text-white px-3 hover:text-gray-300">Home</a>
+                <a href="services.html" class="text-white px-3 hover:text-gray-300">Services</a>
+                <a href="apply.html" class="text-white px-3 hover:text-gray-300">Apply</a>
+                <a href="status.html" class="text-white px-3 hover:text-gray-300">Loan Status</a>
+                <a href="contact.html" class="text-white px-3 hover:text-gray-300">Contact</a>
+            </nav>
+            <!-- Dark mode toggle button -->
+            <button id="themeToggle" class="ml-4 px-4 py-2 bg-gray-700 dark:bg-gray-600 text-white rounded">Toggle Dark Mode</button>
+        </div>
+    </header>
+
+    <!-- Loan Status Section -->
+    <section id="status" class="py-10 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">Loan Status</h2>
+            <div id="statusMessage" class="bg-white dark:bg-gray-800 p-6 rounded shadow max-w-xl mx-auto">
+                <p class="text-lg text-gray-700 dark:text-gray-300">Your loan application status will appear here once submitted.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-blue-600 dark:bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2024 Bank Loan Services. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Toggle dark mode when the button is clicked
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+        });
+
+        // Simulated loan status update
+        const statusMessage = document.getElementById('statusMessage');
+        setTimeout(() => {
+            statusMessage.innerHTML = `
+                <p class="text-lg font-bold text-green-600">Your loan application is under review!</p>
+                <p class="text-gray-700 dark:text-gray-300">Check back for updates.</p>
+            `;
+        }, 2000);
+    </script>
+</body>
+</html>
